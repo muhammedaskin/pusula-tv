@@ -1,8 +1,8 @@
 /* --- TEMEL AYARLAR VE DEĞİŞKENLER --- */
 :root {
-    --primary: #800020; /* Bordo */
+    --primary: #800020; /* Ana Bordo Rengi */
     --primary-dark: #580016;
-    --accent: #d32f2f; /* Canlı Kırmızı */
+    --accent: #d32f2f; /* Canlı Kırmızı (Breaking News) */
     --text-dark: #111111;
     --text-gray: #555555;
     --text-light: #888888;
@@ -59,6 +59,7 @@ img { display: block; width: 100%; height: auto; object-fit: cover; }
     color: var(--primary); line-height: 1; letter-spacing: -1px;
 }
 .brand-logo span { color: #000; }
+.slogan { font-size: 0.8rem; color: #666; letter-spacing: 2px; text-transform: uppercase; font-weight: 600; }
 .header-ad img { max-height: 90px; width: auto; }
 
 /* --- NAVBAR --- */
@@ -68,7 +69,7 @@ img { display: block; width: 100%; height: auto; object-fit: cover; }
     position: sticky; top: 0; z-index: 1000;
     box-shadow: var(--shadow-md);
 }
-.navbar .container { display: flex; justify-content: space-between; align-items: center; }
+.navbar .container { display: flex; justify-content: space-between; align-items: center; position: relative; }
 .nav-links { display: flex; }
 .nav-links a {
     display: block; color: #fff; padding: 16px 18px;
@@ -76,6 +77,7 @@ img { display: block; width: 100%; height: auto; object-fit: cover; }
 }
 .nav-links a:hover { background-color: var(--primary-dark); }
 .home-icon { font-size: 1.1rem; }
+
 .btn-live {
     background-color: var(--accent); color: #fff; padding: 8px 15px;
     border-radius: 4px; font-weight: 700; font-size: 0.9rem;
@@ -84,6 +86,10 @@ img { display: block; width: 100%; height: auto; object-fit: cover; }
 .btn-live i { animation: pulse 1.5s infinite; }
 @keyframes pulse { 0% { opacity: 1; } 50% { opacity: 0.3; } 100% { opacity: 1; } }
 .search-toggle { background: transparent; border: none; color: #fff; font-size: 1.2rem; cursor: pointer; }
+.nav-actions { display: flex; align-items: center; }
+
+/* Hamburger Menu (Varsayılan Gizli) */
+.hamburger-menu { display: none; font-size: 1.5rem; color: #fff; cursor: pointer; margin-right: 15px; }
 
 /* --- BREAKING NEWS --- */
 .breaking-news {
@@ -112,9 +118,7 @@ img { display: block; width: 100%; height: auto; object-fit: cover; }
     content: ''; position: absolute; bottom: 0; left: 0; width: 100%; height: 70%;
     background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
 }
-.card-details {
-    position: absolute; bottom: 30px; left: 30px; right: 30px; z-index: 2; color: #fff;
-}
+.card-details { position: absolute; bottom: 30px; left: 30px; right: 30px; z-index: 2; color: #fff; }
 .category-tag {
     background-color: var(--accent); padding: 4px 10px;
     font-size: 0.75rem; font-weight: 700; text-transform: uppercase;
@@ -131,9 +135,7 @@ img { display: block; width: 100%; height: auto; object-fit: cover; }
 .sub-details h3 { font-size: 1rem; font-weight: 600; }
 
 /* --- İÇERİK DÜZENİ --- */
-.content-sidebar-layout {
-    display: grid; grid-template-columns: 800px 1fr; gap: 30px; margin-bottom: 50px;
-}
+.content-sidebar-layout { display: grid; grid-template-columns: 800px 1fr; gap: 30px; margin-bottom: 50px; }
 .section-header { border-bottom: 2px solid var(--border-color); margin-bottom: 20px; }
 .section-header h2 {
     font-family: var(--font-heading); font-size: 1.5rem; display: inline-block;
@@ -230,18 +232,39 @@ img { display: block; width: 100%; height: auto; object-fit: cover; }
 .newsletter button { width: 100%; padding: 12px; background: var(--primary); color: #fff; border: none; font-weight: 700; cursor: pointer; border-radius: 4px; }
 .footer-bottom { text-align: center; padding: 20px 0; font-size: 0.85rem; }
 
-/* --- RESPONSIVE --- */
+/* --- RESPONSIVE / MOBİL UYUMLULUK --- */
 @media (max-width: 1024px) {
     .content-sidebar-layout { grid-template-columns: 1fr; }
     .sidebar-column { position: static; display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
     .sticky-ad { display: none; }
 }
+
 @media (max-width: 768px) {
+    /* Header ve Topbar */
     .top-bar-inner, .header-grid { flex-direction: column; gap: 15px; text-align: center; }
-    .nav-links { display: none; }
+    
+    /* Mobil Menü Stilleri */
+    .navbar .container { justify-content: flex-start; }
+    .hamburger-menu { display: block; }
+    .nav-links {
+        display: none; /* Varsayılan gizli */
+        flex-direction: column; width: 100%; position: absolute; top: 100%; left: 0;
+        background-color: var(--primary); border-top: 1px solid rgba(255,255,255,0.1);
+        box-shadow: 0 10px 15px rgba(0,0,0,0.2); z-index: 999;
+    }
+    .nav-links.active { display: flex; animation: slideDown 0.3s ease forwards; }
+    @keyframes slideDown { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: translateY(0); } }
+    .nav-links li { width: 100%; text-align: left; border-bottom: 1px solid rgba(255,255,255,0.1); }
+    .nav-actions { margin-left: auto; }
+    .live-text { display: none; } /* Mobilde "CANLI" yazısını gizle */
+
+    /* Gridler */
     .headline-grid { grid-template-columns: 1fr; }
     .headline-main { height: 300px; }
-    .headline-sub { display: none; }
+    .headline-sub { display: none; } /* Mobilde yan manşetleri gizle */
+    .grid-3 { grid-template-columns: 1fr; }
+    
+    /* Footer */
     .footer-top { grid-template-columns: 1fr; text-align: center; }
     .sidebar-column { grid-template-columns: 1fr; }
 }
