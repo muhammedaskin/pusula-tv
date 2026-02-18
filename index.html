@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pusula TV | Türkiye'nin Haber Referansı</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,700;0,900;1,700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="top-bar">
+        <div class="container top-bar-inner">
+            <div class="tb-left">
+                <span class="location"><i class="fas fa-map-marker-alt"></i> Elazığ</span>
+                <span class="weather" id="elazig-weather"><i class="fas fa-spinner fa-spin"></i> Yükleniyor...</span>
+                <span class="date" id="current-date">18 Şubat 2026, Çarşamba</span>
+            </div>
+            <div class="tb-right">
+                <a href="#">Künye</a>
+                <a href="#">İletişim</a>
+                <div class="social-mini">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <header class="main-header">
+        <div class="container header-grid">
+            <div class="logo-wrapper">
+                <a href="/" class="brand-logo">PUSULA<span>TV</span></a>
+            </div>
+            <div class="header-ad">
+                <img src="https://placehold.co/728x90/f1f1f1/999?text=Google+Reklam+Alanı+(728x90)" alt="Reklam">
+            </div>
+        </div>
+    </header>
+
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <ul class="nav-links">
+                <li><a href="#" class="home-icon"><i class="fas fa-home"></i></a></li>
+                <li><a href="#">GÜNDEM</a></li>
+                <li><a href="#">EKONOMİ</a></li>
+                <li><a href="#">SİYASET</a></li>
+                <li><a href="#">DÜNYA</a></li>
+                <li><a href="#">SPOR</a></li>
+                <li><a href="#">TEKNOLOJİ</a></li>
+                <li><a href="#">YAŞAM</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="#" class="btn-live"><i class="fas fa-circle"></i> CANLI TV</a>
+                <button class="search-toggle"><i class="fas fa-search"></i></button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="breaking-news">
+        <div class="container bn-inner">
+            <div class="bn-label">SON DAKİKA</div>
+            <div class="bn-content">
+                <marquee scrollamount="8" onmouseover="this.stop();" onmouseout="this.start();">
+                    <span class="dot">●</span> Elazığspor şampiyonluk maçına çıkıyor! <span class="time">14:02</span>
+                    <span class="dot">●</span> Merkez Bankası faiz kararını açıkladı: Piyasalar hareketli <span class="time">13:50</span>
+                    <span class="dot">●</span> Yerli otomobilde yeni kampanya başladı <span class="time">13:45</span>
+                </marquee>
+            </div>
+        </div>
+    </div>
+
+    <main class="container main-wrapper">
+        
+        <section class="headline-grid">
+            <div class="headline-main">
+                <a href="#" class="card-overlay">
+                    <img src="https://placehold.co/800x500/800020/white?text=Ana+Manşet+Görseli" alt="Manşet">
+                    <div class="card-details">
+                        <span class="category-tag">ÖZEL HABER</span>
+                        <h1>Türkiye'nin Konuştuğu Olayda Perde Arkası Aralandı</h1>
+                        <p>Uzmanlar son gelişmeleri değerlendirdi: Bu karar piyasaları nasıl etkileyecek?</p>
+                    </div>
+                </a>
+            </div>
+            <div class="headline-sub">
+                <a href="#" class="sub-card">
+                    <img src="https://placehold.co/400x250/333/white?text=Gündem" alt="Haber">
+                    <div class="sub-details">
+                        <h3>Kabine Toplantısı Sona Erdi</h3>
+                    </div>
+                </a>
+                <a href="#" class="sub-card">
+                    <img src="https://placehold.co/400x250/333/white?text=Spor" alt="Haber">
+                    <div class="sub-details">
+                        <h3>Derbi Öncesi Son Durum</h3>
+                    </div>
+                </a>
+                <a href="#" class="sub-card">
+                    <img src="https://placehold.co/400x250/333/white?text=Ekonomi" alt="Haber">
+                    <div class="sub-details">
+                        <h3>Altın Fiyatlarında Rekor</h3>
+                    </div>
+                </a>
+                <a href="#" class="sub-card">
+                    <img src="https://placehold.co/400x250/333/white?text=Teknoloji" alt="Haber">
+                    <div class="sub-details">
+                        <h3>Yapay Zeka Devrimi</h3>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <div class="content-sidebar-layout">
+            
+            <div class="main-column">
+                
+                <div class="section-header">
+                    <h2>GÜNÜN ÖNE ÇIKANLARI</h2>
+                </div>
+
+                <div class="news-list-view">
+                    <article class="news-item">
+                        <div class="ni-image">
+                            <img src="https://placehold.co/300x200/eee/800020?text=Borsa" alt="Haber">
+                        </div>
+                        <div class="ni-content">
+                            <span class="meta">EKONOMİ | 14:30</span>
+                            <h3>Borsada Tarihi Gün: Endeks Rekor Kırdı</h3>
+                            <p>Yatırımcıların gözü kulağı bugünkü açıklamalardaydı. Beklenen veriler geldi ve piyasa olumlu tepki verdi.</p>
+                        </div>
+                    </article>
+
+                    <article class="news-item">
+                        <div class="ni-image">
+                            <img src="https://placehold.co/300x200/eee/800020?text=Eğitim" alt="Haber">
+                        </div>
+                        <div class="ni-content">
+                            <span class="meta">EĞİTİM | 12:15</span>
+                            <h3>Üniversite Sınav Sisteminde Değişiklik İddiası</h3>
+                            <p>Milli Eğitim Bakanlığı'ndan yapılan son dakika açıklaması öğrencileri heyecanlandırdı.</p>
+                        </div>
+                    </article>
+                    
+                    <article class="news-item">
+                        <div class="ni-image">
+                            <img src="https://placehold.co/300x200/eee/800020?text=Sağlık" alt="Haber">
+                        </div>
+                        <div class="ni-content">
+                            <span class="meta">SAĞLIK | 10:00</span>
+                            <h3>Kış Aylarında Bağışıklığı Güçlendiren 5 Besin</h3>
+                            <p>Uzman diyetisyenler uyarıyor: Bu besinleri sofranızdan eksik etmeyin.</p>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="gallery-strip-section">
+                    <div class="section-header-dark">
+                        <h2><i class="fas fa-camera"></i> MULTİMEDYA</h2>
+                    </div>
+                    <div class="gallery-grid">
+                        <div class="g-item">
+                            <img src="https://placehold.co/250x350/222/fff?text=Galeri+1" alt="Galeri">
+                            <span>Haftanın En İyileri</span>
+                        </div>
+                        <div class="g-item">
+                            <img src="https://placehold.co/250x350/222/fff?text=Galeri+2" alt="Galeri">
+                            <span>Tarihi Keşif</span>
+                        </div>
+                        <div class="g-item">
+                            <img src="https://placehold.co/250x350/222/fff?text=Galeri+3" alt="Galeri">
+                            <span>Doğa Harikaları</span>
+                        </div>
+                        <div class="g-item">
+                            <img src="https://placehold.co/250x350/222/fff?text=Galeri+4" alt="Galeri">
+                            <span>Teknoloji Fuarı</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="triple-news-grid">
+                    <div class="section-header">
+                        <h2>SPOR GÜNDEMİ</h2>
+                    </div>
+                    <div class="grid-3">
+                        <div class="small-card">
+                            <img src="https://placehold.co/300x200/eee/800020?text=Spor+1" alt="Spor">
+                            <h4>Transfer Dönemi Başladı</h4>
+                        </div>
+                        <div class="small-card">
+                            <img src="https://placehold.co/300x200/eee/800020?text=Spor+2" alt="Spor">
+                            <h4>Milli Takım Kadrosu</h4>
+                        </div>
+                        <div class="small-card">
+                            <img src="https://placehold.co/300x200/eee/800020?text=Spor+3" alt="Spor">
+                            <h4>Şampiyonlar Ligi Kurası</h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <aside class="sidebar-column">
+                
+                <div class="widget market-widget">
+                    <div class="widget-title">
+                        CANLI BORSA
+                        <span class="live-indicator"></span>
+                    </div>
+                    <div class="market-row">
+                        <div class="m-item">
+                            <span class="currency"><i class="fas fa-dollar-sign"></i> DOLAR</span>
+                            <span class="val" id="usd-val">32.500</span>
+                        </div>
+                        <div class="m-item">
+                            <span class="currency"><i class="fas fa-euro-sign"></i> EURO</span>
+                            <span class="val" id="eur-val">35.100</span>
+                        </div>
+                        <div class="m-item">
+                            <span class="currency">GRAM ALTIN</span>
+                            <span class="val" id="gold-val">2.450</span>
+                        </div>
+                        <div class="m-item">
+                            <span class="currency">BIST 100</span>
+                            <span class="val" id="bist-val">9.800</span>
+                        </div>
+                    </div>
+                    <div class="market-footer">
+                        Veriler canlı simülasyondur.
+                    </div>
+                </div>
+
+                <div class="widget authors-widget">
+                    <div class="widget-title">YAZARLAR</div>
+                    <a href="#" class="author-item">
+                        <img src="https://placehold.co/60x60/800020/fff?text=MA" alt="Yazar">
+                        <div class="author-info">
+                            <h5>Muhammed Aşkın</h5>
+                            <span>Dijital Dünyanın Geleceği</span>
+                        </div>
+                    </a>
+                    <a href="#" class="author-item">
+                        <img src="https://placehold.co/60x60/333/fff?text=AY" alt="Yazar">
+                        <div class="author-info">
+                            <h5>Ahmet Yılmaz</h5>
+                            <span>Ekonomide Yeni Dönem</span>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="widget trend-widget">
+                    <div class="widget-title">ÇOK OKUNANLAR</div>
+                    <ol class="trend-list">
+                        <li><a href="#">Emekliye ek zam müjdesi geldi mi? İşte detaylar</a></li>
+                        <li><a href="#">Meteorolojiden 10 il için sarı kodlu uyarı</a></li>
+                        <li><a href="#">Ünlü oyuncudan şok veda paylaşımı</a></li>
+                        <li><a href="#">Benzin ve motorine bu gece zam bekleniyor</a></li>
+                        <li><a href="#">Survivor'da dokunulmazlığı kim kazandı?</a></li>
+                    </ol>
+                </div>
+
+                <div class="sticky-ad">
+                    <img src="https://placehold.co/300x600/ddd/999?text=Dikey+Reklam" alt="Reklam">
+                </div>
+
+            </aside>
+        </div>
+
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="f-col brand-col">
+                    <h2>PUSULA<span>TV</span></h2>
+                    <p>Türkiye'nin ve dünyanın nabzını tutan, doğru ve tarafsız haberciliğin adresi.</p>
+                    <div class="f-socials">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="f-col">
+                    <h4>KURUMSAL</h4>
+                    <ul>
+                        <li><a href="#">Hakkımızda</a></li>
+                        <li><a href="#">Yayın İlkeleri</a></li>
+                        <li><a href="#">Künye</a></li>
+                        <li><a href="#">İletişim</a></li>
+                    </ul>
+                </div>
+                <div class="f-col">
+                    <h4>KATEGORİLER</h4>
+                    <ul>
+                        <li><a href="#">Gündem</a></li>
+                        <li><a href="#">Ekonomi</a></li>
+                        <li><a href="#">Spor</a></li>
+                        <li><a href="#">Magazin</a></li>
+                    </ul>
+                </div>
+                <div class="f-col newsletter">
+                    <h4>E-BÜLTEN</h4>
+                    <p>Gelişmelerden haberdar olun.</p>
+                    <form>
+                        <input type="email" placeholder="E-posta adresiniz">
+                        <button type="button">KAYIT OL</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Pusula TV. Tüm hakları saklıdır.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // 1. ELAZIĞ HAVA DURUMU (API)
+        async function getElazigWeather() {
+            const weatherElement = document.getElementById('elazig-weather');
+            try {
+                // Elazığ Koordinatları: 38.681, 39.226
+                const response = await fetch('https://api.open-meteo.com/v1/forecast?latitude=38.681&longitude=39.226&current_weather=true');
+                const data = await response.json();
+                
+                const temp = Math.round(data.current_weather.temperature);
+                const weatherCode = data.current_weather.weathercode;
+                
+                // İkon seçimi
+                let icon = '<i class="fas fa-sun"></i>';
+                if (weatherCode > 3) icon = '<i class="fas fa-cloud"></i>';
+                if (weatherCode > 50) icon = '<i class="fas fa-cloud-rain"></i>';
+                if (weatherCode > 70) icon = '<i class="fas fa-snowflake"></i>';
+    
+                weatherElement.innerHTML = `${icon} ${temp}°C`;
+            } catch (error) {
+                weatherElement.innerHTML = '<i class="fas fa-times"></i> N/A';
+            }
+        }
+    
+        // 2. CANLI DÖVİZ SİMÜLASYONU
+        const marketData = {
+            usd: { id: 'usd-val', value: 32.55, step: 0.02 },
+            eur: { id: 'eur-val', value: 35.12, step: 0.02 },
+            gold: { id: 'gold-val', value: 2450, step: 5 },
+            bist: { id: 'bist-val', value: 9800, step: 15 }
+        };
+    
+        function updateMarket() {
+            for (const key in marketData) {
+                const item = marketData[key];
+                const element = document.getElementById(item.id);
+                
+                if (Math.random() > 0.5) {
+                    const change = (Math.random() * item.step) - (item.step / 2);
+                    const newValue = item.value + change;
+                    const direction = newValue > item.value ? 'up' : 'down';
+                    const icon = direction === 'up' ? '<i class="fas fa-caret-up"></i>' : '<i class="fas fa-caret-down"></i>';
+                    const colorClass = direction === 'up' ? 'flash-up' : 'flash-down';
+    
+                    marketData[key].value = newValue;
+                    
+                    let displayValue;
+                    if(key === 'gold' || key === 'bist') {
+                        displayValue = Math.floor(newValue).toLocaleString('tr-TR');
+                    } else {
+                        displayValue = newValue.toFixed(3).replace('.', ',');
+                    }
+    
+                    element.innerHTML = `${displayValue} ${icon}`;
+                    element.classList.remove('flash-up', 'flash-down');
+                    void element.offsetWidth; 
+                    element.classList.add(colorClass);
+                }
+            }
+        }
+    
+        // Başlat
+        document.addEventListener('DOMContentLoaded', () => {
+            getElazigWeather();
+            setInterval(updateMarket, 3000); // 3 saniyede bir güncelle
+            
+            // Tarihi güncelle
+            const dateOpts = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+            document.getElementById('current-date').innerText = new Date().toLocaleDateString('tr-TR', dateOpts);
+        });
+    </script>
+</body>
+</html>
